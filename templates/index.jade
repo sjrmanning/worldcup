@@ -1,0 +1,10 @@
+include mixins/match
+include main
+
+body
+  include nav
+  h1 Today's Matches
+  each match in matches
+    +matchitem(match)
+
+

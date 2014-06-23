@@ -1,0 +1,14 @@
+mixin team_title(team)
+    -var team_name = team.country || 'TBA'
+    -var team_code = team.code || team.fifa_code || ''
+    -var team_link = '/matches/' + team_code
+    -var team_ling = team.hatchdling || ''
+    if (team.code || team.fifa_code)
+        -var team_flag = 'http://img.fifa.com/images/flags/2/' + team_code.toLowerCase() + '.png';
+    else
+        -var team_flag = ''
+
+    span.flag
+        img(src="#{team_flag}")
+    |&nbsp;
+    span.teamname #[a(href="#{team_link}") #{team_name}] (#{team_ling})

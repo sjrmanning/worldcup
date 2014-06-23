@@ -1,0 +1,17 @@
+{
+  "name": "hadapptor-wc",
+  "version": "0.1.0",
+  "description": "World cup info for Hatch/Adapptor.",
+  "author": {
+    "name": "Simon Manning",
+    "email": "simon@adapptor.com.au"
+  },
+  "scripts": {
+      "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "~4.2.0",
+    "request": "~2.34.0",
+    "jade": "~1.3.1"
+  }
+}

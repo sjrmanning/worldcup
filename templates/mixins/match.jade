@@ -1,0 +1,16 @@
+include shared
+
+mixin match_title(match)
+    h3
+        +team_title(match.home_team)
+        |&nbsp;vs.&nbsp;
+        +team_title(match.away_team)
+
+mixin matchitem(match)
+    div.match
+        +match_title(match)
+        li= 'Date/Time: ' + match.datetime
+        li= 'Location: ' + match.location
+        if (match.status === 'completed')
+            li= 'Final score: ' + match.home_team.goals + ' - ' + match.away_team.goals
+            li= 'Winner: ' + match.winner

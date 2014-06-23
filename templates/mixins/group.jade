@@ -1,0 +1,27 @@
+include shared
+
+mixin group(item)
+    div
+        table
+            thead
+                tr
+                    th Country
+                    th Wins
+                    th Draws
+                    th Losses
+                    th GF
+                    th GA
+            tbody
+                each country in item
+                    tr
+                        td
+                            if (country.knocked_out)
+                                strike
+                                    +team_title(country)
+                            else
+                                +team_title(country)
+                        td #{country.wins}
+                        td #{country.draws}
+                        td #{country.losses}
+                        td #{country.goals_for}
+                        td #{country.goals_against}
